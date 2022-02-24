@@ -1,0 +1,18 @@
+def segregate(a, n):
+	i = 0
+	j = (n - 1)
+	while (j >= i):
+		if (a[i] % 2 != 0):
+			if (a[j] % 2 == 0):
+				a[i], a[j] = a[j], a[i]
+				i += 1
+				j -= 1
+			else:
+				j -= 1
+		else:
+			i += 1;
+	for i in range(n):
+		print(a[i], end = " ")
+a = [ 1, 2, 3, 4, 5, 6, 11, 95, 8, 9, 7 ]
+n = len(a)
+segregate(a, n)
